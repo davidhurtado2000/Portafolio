@@ -34,7 +34,7 @@ a:active {
 }
 
 .ctn-main {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .fixed {
@@ -77,7 +77,7 @@ a:active {
 
 .navbar-custom {
     position: fixed !important;
-    top: 10px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 15px;
