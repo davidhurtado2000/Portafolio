@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(16, 21, 46) !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.ctn-main {
+    margin-top: 100px;
+}
+
+.fixed {
+    position: fixed;
+    overflow-y: auto;
+    width: 38% !important;
+    height: 100vh;
+}
+
+.offset {
+    margin-left: 50%;
+}
+
+
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+    .fixed {
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+
+    .offset {
+        margin-left: 0;
+        width: 100vw;
+    }
+}
