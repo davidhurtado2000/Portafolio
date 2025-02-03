@@ -1,3 +1,4 @@
+/* CSS */
 body {
     /*background-color: rgb(16, 21, 46) !important;*/
     margin: 0;
@@ -49,7 +50,6 @@ a:active {
     color: white;
 }
 
-
 /*RESPONSIVE*/
 @media (max-width: 768px) {
     .fixed {
@@ -62,4 +62,37 @@ a:active {
         margin-left: 0;
         width: 100vw;
     }
+}
+
+.ctn-delay {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.navbar-custom {
+    position: fixed !important;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: rgba(16, 21, 46, 0.8);
+    width: fit-content;
+    z-index: 1000;
+}
+
+.navbar-custom .nav-link {
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
