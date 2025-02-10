@@ -122,14 +122,37 @@ a:active {
 }
 
 .toc a {
-    color: white;
+    color: grey !important;
     text-decoration: none;
     display: block;
     padding: 0.5em;
+    transition: transform 0.1 ease;
+}
+
+.toc a .symb {
+    font-size: 1.5em;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    margin-right: 10px;
+}
+
+.toc a.active .symb {
+    transform: scale(1.5);
 }
 
 .toc a.active { 
-    background-color: rgba(255, 255, 255, 0.2);
+    color: white !important;
+    font-weight: bold;
     border-radius: 5px;
+    transform: translate(20px,0px);
+    font-size: large;
 }
+
+.about-text { 
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+
+
 
