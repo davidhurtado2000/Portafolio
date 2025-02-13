@@ -157,6 +157,19 @@ a:active {
     line-height: 1.5;
 }
 
+.lang-section {
+    border-radius: 20px;
+    color: lightgreen;
+    background-color: #003f3f;
+    border: black solid;
+    width: 100px !important;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
 
+.exp-text {
+    color: grey;
+}
 
 
