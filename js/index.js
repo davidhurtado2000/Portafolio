@@ -2,6 +2,9 @@
 document.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
     const tocLinks = document.querySelectorAll('.toc a');
+    const fixedContent = document.getElementById('fixed-content');
+    const mainContainer = document.querySelector('.ctn-main');
+    const offsetContent = document.getElementById('offset-content');
 
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
@@ -17,6 +20,14 @@ document.addEventListener('scroll', function() {
         }
 
     });
+    const mainRect = mainContainer.getBoundingClientRect();
+    if (mainRect.top <= 0) {
+        fixedContent.classList.add('active');
+        offsetContent.classList.add('active');
+    } else {
+        fixedContent.classList.remove('active');
+        offsetContent.classList.remove('active');
+    }
 });
 
 function aboutInfo(){
