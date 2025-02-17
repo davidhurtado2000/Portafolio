@@ -190,4 +190,22 @@ a:active {
     color: grey;
 }
 
+.project-title {
+    font-weight: bold !important;
+}
 
+.project-img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+a.project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+a.project-link:hover {
+    background-color: rgba(154, 154, 154, 0.847);
+}
