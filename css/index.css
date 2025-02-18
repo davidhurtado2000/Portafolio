@@ -9,6 +9,8 @@ body {
     font-family: "Roboto", sans-serif !important;
 }
 
+
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -190,6 +192,15 @@ a:active {
     color: grey;
 }
 
+.pjt-section {
+    border-radius: 10px;
+}
+
+.pjt-section:hover {
+    cursor: pointer;
+    background-color: rgba(127, 127, 127, 0.256);
+}
+
 .project-title {
     font-weight: bold !important;
 }
@@ -209,3 +220,4 @@ a.project-link {
 a.project-link:hover {
     background-color: rgba(154, 154, 154, 0.847);
 }
+
