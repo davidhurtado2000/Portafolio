@@ -47,11 +47,55 @@ function aboutInfo(){
     });
 }
 
-function expInfo(){
-    const expContent = [
-
+document.addEventListener('DOMContentLoaded', function() { 
+    const projects = [
+        {
+            title: "Klipperz Academy System",
+            imgSrc: "img/Klip_Academy.png",
+            altText: "Klipperz Academy",
+            description: "Class management system designed with XAMPP, PHP, HTML, CSS, and JavaScript. This system streamlines registration and enhances data security with secure user authentication.",
+            link: "https://github.com/davidhurtado2000/Klipperz-Academy-System"
+        },
+        {
+            title: "Downstream",
+            imgSrc: "img/Downstream.png",
+            altText: "Downstream",
+            description: "Youtube downloader built with Electron colaborated with Weston Rivers (Student of theCoderSchool). It allows users to download videos. It uses libraries like FFmpeg and YouTube-dl for fast and reliable downloads",
+            link: "https://github.com/davidhurtado2000/Klipperz-Academy-System"
+        },
+        {
+            title: "Fact Checker Discord Bot",
+            imgSrc: "img/discord.png",
+            altText: "Fact Checker",
+            description: "A discord bot that checks facts based on a given topic using a Wikipedia API. Made with Shiven Singh (Student of theCoderSchool).",
+            link: "https://github.com/ShivenSinghTheDeveloper/windows-bot-template-main"
+        }
     ];
-}
+
+    const projectsContainer = document.getElementById("projects-container");
+
+    projects.forEach(project => {
+        const projectDiv = document.createElement("div");
+        projectDiv.className = "row pjt-section mt-4 mb-5";
+        projectDiv.onclick = () => location.href = project.link;
+
+        projectDiv.innerHTML = `
+            <div class="col-3 text-center project-img">
+                <img src="${project.imgSrc}" class="rounded mx-auto d-block" alt="${project.altText}" height="100" width="150">
+            </div>
+            <div class="col-9">
+                <div>
+                    <span class="project-title">${project.title}</span>
+                </div>
+                <div class="my-1 exp-text">
+                    <span>${project.description}</span>
+                </div>
+            </div>
+        `;
+
+        projectsContainer.appendChild(projectDiv);
+    });
+});
 
 
 //Init functions for info
