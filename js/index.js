@@ -97,6 +97,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const experiences = [
+        {
+            period: "2022 - Present",
+            title: "Code Instructor - theCoderSchool Centennial",
+            description: "Conduct weekly, semi-private coding sessions for high school and college students, focusing on languages such as Python, JavaScript, Java, and C++. Students engage in a wide range of projects, including web development, chatbots, mobile applications, and game design. By collaborating with instructors nationwide, Staying updated with the latest teaching methods and technologies. My flexible teaching style adapts to student needs, continuously integrating new programming techniques.",
+            skills: ["React", "JavaScript", "PHP", "Python", "Lua", "C++", "C#", "HTML", "CSS", "Java", "SQL"]
+        },
+        {
+            period: "2023 - Present",
+            title: "Jr. Software Engineer - Klipperz Barbershop",
+            description: "I designed and implemented a class management system using XAMPP, PHP, HTML, CSS, and JavaScript, which significantly improved the academy's operational efficiency by streamlining registration and attendance tracking. By implementing secure user authentication, I enhanced data security. Collaborating with stakeholders, I gathered system requirements and delivered tailored solutions to improve class scheduling and administrative tasks.",
+            skills: ["PHP", "JavaScript", "HTML", "CSS", "Bootstrap", "SQL"]
+        }
+        // Add more experiences here
+    ];
+
+    const experienceContainer = document.getElementById("experience-container");
+
+    experiences.forEach(experience => {
+        const experienceDiv = document.createElement("div");
+        experienceDiv.className = "row";
+
+        experienceDiv.innerHTML = `
+            <div class="col-3 text-center">
+                <span>${experience.period}</span>
+            </div>
+            <div class="col-9">
+                <div>${experience.title}</div>
+                <div class="my-1 exp-text">
+                    <span>${experience.description}</span>
+                </div>
+                <div class="col-12 mt-3">
+                    <div class="row">
+                        ${experience.skills.map(skill => `<div class="col-3 lang-section">${skill}</div>`).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        experienceContainer.appendChild(experienceDiv);
+    });
+});
 
 //Init functions for info
 aboutInfo();

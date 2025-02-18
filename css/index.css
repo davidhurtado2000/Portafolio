@@ -64,6 +64,11 @@ a:active {
 
 }
 
+.page-title {
+    margin-bottom: 35px;
+    margin-top: 20px;
+}
+
 .offset {
     /*margin-left: 50%;*/
     color: white;
