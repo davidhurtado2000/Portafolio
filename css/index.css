@@ -226,3 +226,51 @@ a.project-link:hover {
     background-color: rgba(154, 154, 154, 0.847);
 }
 
+.ctn-picture {
+    color: white;
+    background-color: rgba(66, 16, 52, 0.333);
+    height: 100vh;
+    animation: fadeInZoom 2s ease-in-out forwards;
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.ctn-picture img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+    border: rgb(255, 255, 255) ;
+}
+
+.ctn-picture img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+}
+
+.ctn-picture h1, .ctn-picture h5 {
+    position: relative;
+    animation: slideIn 2s ease-in-out forwards;
+    text-shadow: 0 0 8px rgba(13, 0, 255, 0.8), 0 0 16px rgba(0, 225, 255, 0.8), 0 0 32px rgba(24, 52, 101, 0.8);
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
