@@ -141,5 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 //Init functions for info
 aboutInfo();
