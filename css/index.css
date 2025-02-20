@@ -307,6 +307,15 @@ a.project-link:hover {
     text-align: right;
 }
 
+.middle-bottom { 
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    transform: translateX(-50%);
+    margin: 10px;
+    text-align: center;
+}
+
 
 .flag-icon {
     width: 80px;
