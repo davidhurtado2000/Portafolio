@@ -9,7 +9,7 @@ body {
     font-family: "Roboto", sans-serif !important;
 }
 
-
+/* Gradient Animation */
 
 @keyframes gradient {
     0% {
@@ -22,7 +22,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
 .nameTitle {
     font-size: 50px;
 }
@@ -126,6 +125,8 @@ a:active {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/*Social Media Links for Fixed Div*/
+
 .footer-links {
     /*text-align: center;*/
     margin-top:  10rem !important;
@@ -143,6 +144,29 @@ a:active {
 }
 
 .footer-links img:hover {
+    transform: scale(1.1);
+}
+
+
+/*Social Media Links for Name Presentation*/
+
+.social-links {
+    /*text-align: center;*/
+    margin-top:  1rem !important;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
     transform: scale(1.1);
 }
 
@@ -246,19 +270,19 @@ a.project-link:hover {
     }
 }
 
-.ctn-picture img {
+.ctn-picture .pfp-middle img {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 50%;
     border: rgb(255, 255, 255) ;
 }
 
-.ctn-picture img:hover {
+.ctn-picture .pfp-middle img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     border-radius: 50%;
 }
 
-.ctn-picture h1, .ctn-picture h5 {
+.ctn-picture h1, .ctn-picture h3, .ctn-picture a {
     position: relative;
     animation: slideIn 2s ease-in-out forwards;
     text-shadow: 0 0 8px rgba(13, 0, 255, 0.8), 0 0 16px rgba(0, 225, 255, 0.8), 0 0 32px rgba(24, 52, 101, 0.8);
@@ -273,4 +297,19 @@ a.project-link:hover {
         left: 0;
         opacity: 1;
     }
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    text-align: right;
+}
+
+
+.flag-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 25px;
 }
