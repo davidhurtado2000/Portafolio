@@ -1,27 +1,22 @@
 .typing {
     white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid #fff; /* Ensure the border color is set */
     color: white;
     font-weight: 900;
-    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    display: inline-block;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%; /* Ensure the width is set to 100% */
-    }
+.caret {
+    display: inline-block;
+    border-right: 0.15em solid white;
+    animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from,
-    to {
+    from, to {
         border-color: transparent;
     }
     50% {
-        border-color: #fff;
+        border-color: white;
     }
 }

@@ -1,10 +1,8 @@
 const nameT = "David Hurtado Gomez";
 const career = "Junior Software Engineer";
-const nameWord = document.getElementById('wordname');
-const careerWord = document.getElementById('wordcarrer');
 
-function typeWord(wordElement, word) {
-    wordElement.textContent = ""; // Clear the content before typing
+function typeWord(wordElement, word, caretElement, delay, removeCaret = false) {
+    wordElement.textContent = ""; // Clear content
     let i = 0;
     const typingInterval = setInterval(() => {
         if (i < word.length) {
@@ -12,12 +10,24 @@ function typeWord(wordElement, word) {
             i++;
         } else {
             clearInterval(typingInterval);
+            if (removeCaret) {
+                caretElement.style.display = 'none'; // Hide caret after typing is done
+            }
         }
-    }, 100);
+    }, delay);
 }
 
-// Typing effect for name
-setTimeout(() => typeWord(nameWord, nameT), 500);
+document.addEventListener('DOMContentLoaded', () => {
+    const nameText = document.getElementById('nameText');
+    const careerText = document.getElementById('careerText');
+    const nameCaret = nameText.nextElementSibling; // Getting caret from the DOM
+    const careerCaret = careerText.nextElementSibling; // Getting caret from the DOM
 
-// Typing effect for career
-setTimeout(() => typeWord(careerWord, career), 3000);
+    setTimeout(() => {
+        typeWord(nameText, nameT, nameCaret, 100, true); // Typing name, remove caret after
+    }, 500);
+
+    setTimeout(() => {
+        typeWord(careerText, career, careerCaret, 100, true); // Typing career, caret continues blinking
+    }, 3000);
+});
