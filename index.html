@@ -1,14 +1,15 @@
-<!-- HTML -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/webicon.ico">
+    <meta name="description" content="David Hurtado's personal portfolio showcasing skills, projects, and experience.">
+    <meta name="keywords" content="David Hurtado, Junior Software Engineer, portfolio, web development, software engineer">
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/arrow.css" type="text/css">
     <link rel="stylesheet" href="css/typing.css" type="text/css">
-    <title>My Portafolio</title>
+    <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -47,13 +48,13 @@
     <div class="container-fluid ctn-picture ctn-delay d-flex justify-content-center align-items-center" id="home">
         <div class="row">
             <div class="col-6 top-right">
-                <img src="img/peru.png" alt="Peru Flag" class="flag-icon">
-                <img src="img/united-states.png" alt="uSA Flag" class="flag-icon">
+                <img src="img/peru.png" alt="Peru Flag" class="flag-icon img-fluid">
+                <img src="img/united-states.png" alt="USA Flag" class="flag-icon img-fluid">
             </div>
         </div>
         <div class="row pfp-name">
-            <div class="col-4 d-flex justify-content-center align-items-center pfp-middle ">
-                <img src="img/pfp.png" alt="Profile Picture" height="500" width="500">
+            <div class="col-4 d-flex justify-content-center align-items-center pfp-middle">
+                <img src="img/pfp.png" alt="Profile Picture" height="500" width="500" class="img-fluid">
             </div>
             <div class="col-8 d-flex flex-column start-content">
                 <h1 id="wordstart" class="typing">
@@ -66,19 +67,21 @@
                     <span id="careerText"></span><span class="caret">|</span>
                 </h3>
 
-
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank"><img src="img\linkedin.png"
-                            alt="Linkedin Profile"></a>
-                    <a href="https://github.com/davidhurtado2000" target="_blank"><img src="img\github.png"
-                            alt="Github Profile"></a>
-                    <a href="pdf/DavidHurtadoResume.pdf" target="_blank"><img src="img\resume.png"
-                            alt="Resume Profile"></a>
+                    <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank" aria-label="LinkedIn Profile">
+                        <img src="img/linkedin.png" alt="LinkedIn Icon">
+                    </a>
+                    <a href="https://github.com/davidhurtado2000" target="_blank" aria-label="GitHub Profile">
+                        <img src="img/github.png" alt="GitHub Icon">
+                    </a>
+                    <a href="pdf/DavidHurtadoResume.pdf" target="_blank" aria-label="Download Resume">
+                        <img src="img/resume.png" alt="Resume Icon">
+                    </a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class=" col-12 middle-bottom" onclick="location.href = '#about'">
+            <div class="col-12 middle-bottom" onclick="location.href = '#about'">
                 <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
                     <div class="scroll-prompt-arrow-container">
                         <div class="scroll-prompt-arrow">
@@ -92,7 +95,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="container ctn-main ctn-delay">
         <div class="row">
@@ -125,12 +127,15 @@
                 </div>
 
                 <footer class="footer-links">
-                    <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank"><img src="img\linkedin.png"
-                            alt="Linkedin Profile"></a>
-                    <a href="https://github.com/davidhurtado2000" target="_blank"><img src="img\github.png"
-                            alt="Github Profile"></a>
-                    <a href="pdf/DavidHurtadoResume.pdf" target="_blank"><img src="img\resume.png"
-                            alt="Resume Profile"></a>
+                    <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank" aria-label="LinkedIn Profile">
+                        <img src="img/linkedin.png" alt="LinkedIn Icon">
+                    </a>
+                    <a href="https://github.com/davidhurtado2000" target="_blank" aria-label="GitHub Profile">
+                        <img src="img/github.png" alt="GitHub Icon">
+                    </a>
+                    <a href="pdf/DavidHurtadoResume.pdf" target="_blank" aria-label="Download Resume">
+                        <img src="img/resume.png" alt="Resume Icon">
+                    </a>
                 </footer>
             </div>
             <div class="col-6 offset" id="offset-content">
@@ -149,13 +154,13 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/typing.js"></script>
+
 </body>
-
-
 
 </html>
