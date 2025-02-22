@@ -6,10 +6,29 @@
     display: inline-block;
 }
 
+
 .caret {
     display: inline-block;
     border-right: 0.15em solid white;
     animation: blink-caret 0.75s step-end infinite;
+}
+
+.start-content {
+    padding-top: 100px;
+}
+
+#wordname {
+    font-size: 50;
+}
+
+#wordstart {
+    font-weight: 300;
+    font-size: 50;
+}
+
+#wordcarrer {
+    font-weight: 300;
+    font-size: 30;
 }
 
 @keyframes blink-caret {

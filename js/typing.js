@@ -1,4 +1,5 @@
-const nameT = "David Hurtado Gomez";
+const start = "I'm";
+const nameT = "DAVID HURTADO GOMEZ";
 const career = "Junior Software Engineer";
 
 function typeWord(wordElement, word, caretElement, delay, removeCaret = false) {
@@ -20,14 +21,22 @@ function typeWord(wordElement, word, caretElement, delay, removeCaret = false) {
 document.addEventListener('DOMContentLoaded', () => {
     const nameText = document.getElementById('nameText');
     const careerText = document.getElementById('careerText');
+    const startText = document.getElementById('startText');
+    const startCaret = startText.nextElementSibling; // Getting caret from the DOM
     const nameCaret = nameText.nextElementSibling; // Getting caret from the DOM
     const careerCaret = careerText.nextElementSibling; // Getting caret from the DOM
 
+
+    setTimeout(() => {
+        typeWord(startText, start, startCaret, 100, true); // Typing name, remove caret after
+    }, 1000);
+    
+    
     setTimeout(() => {
         typeWord(nameText, nameT, nameCaret, 100, true); // Typing name, remove caret after
-    }, 500);
+    }, 2000);
 
     setTimeout(() => {
         typeWord(careerText, career, careerCaret, 100, true); // Typing career, caret continues blinking
-    }, 3000);
+    }, 5000);
 });

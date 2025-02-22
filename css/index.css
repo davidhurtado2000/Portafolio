@@ -6,7 +6,7 @@ body {
     background: linear-gradient(-45deg, #10152e, #001f3f, #003f3f, #013220);
     background-size: 2000% 2000%;
     animation: gradient 15s ease infinite;
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Inter", serif !important;
 }
 
 /* Gradient Animation */
@@ -257,6 +257,10 @@ a.project-link:hover {
     animation: fadeInZoom 2s ease-in-out forwards;
 }
 
+.pfp-name {
+    margin-left: 300px !important;
+}
+
 @keyframes fadeInZoom {
     0% {
         opacity: 0;
@@ -271,6 +275,7 @@ a.project-link:hover {
 }
 
 .ctn-picture .pfp-middle img {
+    margin-right: 150px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 50%;
     border: rgb(255, 255, 255) ;
@@ -282,10 +287,11 @@ a.project-link:hover {
     border-radius: 50%;
 }
 
+
+
 .ctn-picture h1, .ctn-picture h3, .ctn-picture a {
     position: relative;
     animation: slideIn 2s ease-in-out forwards;
-    text-shadow: 0 0 8px rgba(13, 0, 255, 0.8), 0 0 16px rgba(0, 225, 255, 0.8), 0 0 32px rgba(24, 52, 101, 0.8);
 }
 
 @keyframes slideIn {
