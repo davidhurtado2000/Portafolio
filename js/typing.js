@@ -1,6 +1,6 @@
 const start = "I'm";
-const nameT = "DAVID HURTADO GOMEZ";
-const career = "Junior Software Engineer";
+const nameT = "DAVID HURTADO";
+const career = "CONSULTANT & SOFTWARE ENGINEER";
 
 function typeWord(wordElement, word, caretElement, delay, removeCaret = false) {
     wordElement.textContent = ""; // Clear content

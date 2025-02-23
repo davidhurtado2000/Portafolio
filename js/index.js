@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             imgSrc: "img/Downstream.png",
             altText: "Downstream",
             description: "Youtube downloader built with Electron colaborated with Weston Rivers (Student of theCoderSchool). It allows users to download videos. It uses libraries like FFmpeg and YouTube-dl for fast and reliable downloads",
-            link: "https://github.com/davidhurtado2000/Klipperz-Academy-System"
+            link: "https://github.com/StrataBytes/Downstream"
         },
         {
             title: "Fact Checker Discord Bot",
