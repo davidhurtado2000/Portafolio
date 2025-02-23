@@ -260,6 +260,7 @@ a.project-link:hover {
 }
 
 .ctn-picture {
+    width: 100%;
     color: white;
     background-color: rgba(66, 16, 52, 0.333);
     height: 100vh;
