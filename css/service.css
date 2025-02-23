@@ -1,0 +1,66 @@
+body {
+    /*background-color: rgb(16, 21, 46) !important;*/
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #10152e, #001f3f, #003f3f, #013220);
+    background-size: 2000% 2000%;
+    animation: gradient 15s ease infinite;
+    font-family: "Inter", serif !important;
+}
+
+/* Gradient Animation */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar-custom {
+    position: fixed !important;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    background-color: rgba(16, 21, 46, 0.8);
+    width: 40%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+}
+
+.navbar-custom .nav-link {
+    color: rgb(238, 227, 227) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-transparent {
+    background-color: transparent;
+}
+
+.navbar-nav a{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.site-title h1{
+    color: white;
+    font-weight: 900 !important;
+}
+
+.first-section {
+    padding: 100px !important;
+}
+

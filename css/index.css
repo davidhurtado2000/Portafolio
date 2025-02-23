@@ -59,8 +59,6 @@ a:active {
     height: 100vh;
     color: white;
     top: 150px;
-
-
 }
 
 .page-title {
@@ -110,12 +108,14 @@ a:active {
     transform: translateX(-50%);
     border-radius: 15px;
     background-color: rgba(16, 21, 46, 0.8);
-    width: fit-content;
+    width: 40%;
     z-index: 1000;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
 }
 
 .navbar-custom .nav-link {
-    color: white !important;
+    color: rgb(238, 227, 227) !important;
     padding: 0.5rem 1rem;
     border-radius: 10px;
     transition: background-color 0.3s ease;
@@ -123,6 +123,15 @@ a:active {
 
 .navbar-custom .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-transparent {
+    background-color: transparent;
+}
+
+.navbar-nav a{
+    font-weight: 800; 
+    font-size: 20px;
 }
 
 /*Social Media Links for Fixed Div*/
