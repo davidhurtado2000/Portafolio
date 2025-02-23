@@ -338,3 +338,33 @@ a.project-link:hover {
     height: 80px;
     margin-right: 25px;
 }
+
+.social-links .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+}
+
+.social-links .button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.footer-links .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+}
+
+.footer-links .button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
