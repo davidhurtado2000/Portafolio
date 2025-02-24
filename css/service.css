@@ -74,7 +74,45 @@ body {
     border-radius: 15px;
     margin-top: 50px;
     margin-bottom: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
 }
+
+
+.clickable-div {
+    flex: 1;
+    cursor: pointer;
+}
+
+
+.section-model.selected {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #48beec;
+
+}
+
+.section-model.selected:hover {
+    background-color: #66c9ea;
+
+}
+
+.section-model img {
+    width: 100%;
+    height: auto;
+}
+
+.content-services {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+.text {
+    font-weight: 800 !important;
+    color: white !important;
+}
+
 
 
 

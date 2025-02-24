@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         typeWord(startText, start, startCaret, 100, true); // Typing name, remove caret after
-    }, 1000);
+    }, 2000);
     
     
     setTimeout(() => {
         typeWord(nameText, nameT, nameCaret, 100, true); // Typing name, remove caret after
-    }, 2000);
+    }, 3000);
 
     setTimeout(() => {
         typeWord(careerText, career, careerCaret, 100, true); // Typing career, caret continues blinking
-    }, 5000);
+    }, 4500);
 });
