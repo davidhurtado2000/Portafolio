@@ -10,6 +10,15 @@ window.addEventListener('scroll', function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    const serviceContent = [
+        "Transform your ideas into functional and dynamic web applications. Using the latest technologies in HTML, CSS, and JavaScript, I build robust applications that are tailored to your specific needs and goals.",
+        "Create visually appealing and user-friendly designs that captivate your audience. From layout to interactive elements, I focus on delivering seamless and intuitive user experiences that keep users engaged.",
+        "Ensure your systems run smoothly with comprehensive maintenance services. Whether it's troubleshooting software issues or performing hardware upgrades, I provide reliable solutions to keep your technology in top shape.",
+        "Empower yourself with knowledge through expert consulting and teaching. Whether you're looking to improve your coding skills or need guidance on your next tech project, I offer personalized training and advice to help you succeed."
+    ];
+
+
     const services = [
         {
             imgSrc: "../img/services/html.png",
@@ -41,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const contentDiv = document.getElementById("content");
 
     const contentMap = {
-        "div1": `<div class="row"><div class="col-6"><h1>Title 1</h1><span>Content for Div 1</span></div><div class="col-6">Second Section with Image 1</div></div>`,
-        "div2": `<div class="row"><div class="col-6"><h1>Title 2</h1><span>Content for Div 2</span></div><div class="col-6">Second Section with Image 2</div></div>`,
-        "div3": `<div class="row"><div class="col-6"><h1>Title 3</h1><span>Content for Div 3</span></div><div class="col-6">Second Section with Image 3</div></div>`,
-        "div4": `<div class="row"><div class="col-6"><h1>Title 4</h1><span>Content for Div 4</span></div><div class="col-6">Second Section with Image 4</div></div>`
+        "div1": `<div class="row "><div class="col-6"><h1>${services[0].title}</h1><span>${serviceContent[0]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[0].imgSrc}" class="img-thumbnail content-image"></div></div>`,
+        "div2": `<div class="row "><div class="col-6"><h1>${services[1].title}</h1><span>${serviceContent[1]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[1].imgSrc}" class="img-thumbnail content-image"></div></div>`,
+        "div3": `<div class="row "><div class="col-6"><h1>${services[2].title}</h1><span>${serviceContent[2]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[2].imgSrc}" class="img-thumbnail content-image"></div></div>`,
+        "div4": `<div class="row "><div class="col-6"><h1>${services[3].title}</h1><span>${serviceContent[3]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[3].imgSrc}" class="img-thumbnail content-image"></div></div>`,
     };
 
     services.forEach((service, index) => {
@@ -56,8 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="col section-model">
                 <div class="row">
                     <div class="col-12 my-4">
-                        <img src="${service.imgSrc}" class="img-thumbnail service-img" alt="${service.altText}"
-                            style="background-color: transparent; border: none;" width="150">
+                        <img src="${service.imgSrc}" class="img-thumbnail service-img" alt="${service.altText}" width="150">
                     </div>
                 </div>
                 <div class="row">
