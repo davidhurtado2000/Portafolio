@@ -64,3 +64,18 @@ body {
     padding: 100px !important;
 }
 
+.service-section {
+    color: white;
+}
+
+.section-model {
+    background-color: rgba(16, 21, 46, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
