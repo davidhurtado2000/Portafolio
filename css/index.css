@@ -15,13 +15,16 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
+
 .nameTitle {
     font-size: 50px;
 }
@@ -45,8 +48,10 @@ a:active {
 
 
 .fixed {
-    top: 0; /* Initial top position */
-    position: relative; /* Start as relative to allow transition to fixed */
+    top: 0;
+    /* Initial top position */
+    position: relative;
+    /* Start as relative to allow transition to fixed */
     overflow-y: auto;
     color: white;
     transition: top 0.5s ease, position 0.5s ease;
@@ -64,6 +69,7 @@ a:active {
 .page-title {
     margin-bottom: 35px;
     margin-top: 20px;
+    font-weight: 600;
 }
 
 .offset {
@@ -129,8 +135,8 @@ a:active {
     background-color: transparent;
 }
 
-.navbar-nav a{
-    font-weight: 800; 
+.navbar-nav a {
+    font-weight: 800;
     font-size: 20px;
 }
 
@@ -138,7 +144,7 @@ a:active {
 
 .footer-links {
     /*text-align: center;*/
-    margin-top:  10rem !important;
+    margin-top: 10rem !important;
 }
 
 .footer-links a {
@@ -161,7 +167,7 @@ a:active {
 
 .social-links {
     /*text-align: center;*/
-    margin-top:  1rem !important;
+    margin-top: 1rem !important;
 }
 
 .social-links a {
@@ -179,8 +185,8 @@ a:active {
     transform: scale(1.1);
 }
 
-.toc { 
-    margin-top:  5rem !important;
+.toc {
+    margin-top: 5rem !important;
 }
 
 .toc a {
@@ -202,23 +208,29 @@ a:active {
     transform: scale(1.5);
 }
 
-.toc a.active { 
+.toc a.active {
     color: white !important;
     font-weight: bold;
     border-radius: 5px;
-    transform: translate(20px,0px);
+    transform: translate(20px, 0px);
     font-size: large;
 }
 
-.about-text { 
+.about-text {
+    color: white;
     margin-bottom: 1rem;
     line-height: 1.5;
 }
 
+strong {
+    font-weight: bold;
+    color: rgb(91, 180, 210);
+}
+
 .lang-section {
     border-radius: 20px;
-    color: lightgreen;
-    background-color: #003f3f;
+    color: rgb(0, 241, 0);
+    background-color: #034547;
     border: black solid;
     width: 100px !important;
     text-align: center;
@@ -278,6 +290,7 @@ a.project-link:hover {
         transform: scale(0.5);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -289,7 +302,7 @@ a.project-link:hover {
     margin-right: 150px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 50%;
-    border: rgb(255, 255, 255) ;
+    border: rgb(255, 255, 255);
 }
 
 .ctn-picture .pfp-middle img:hover {
@@ -300,7 +313,9 @@ a.project-link:hover {
 
 
 
-.ctn-picture h1, .ctn-picture h3, .ctn-picture a {
+.ctn-picture h1,
+.ctn-picture h3,
+.ctn-picture a {
     position: relative;
     animation: slideIn 2s ease-in-out forwards;
 }
@@ -310,6 +325,7 @@ a.project-link:hover {
         left: -100%;
         opacity: 0;
     }
+
     100% {
         left: 0;
         opacity: 1;
@@ -324,7 +340,7 @@ a.project-link:hover {
     text-align: right;
 }
 
-.middle-bottom { 
+.middle-bottom {
     position: absolute;
     bottom: 0;
     left: 49%;
@@ -343,29 +359,41 @@ a.project-link:hover {
 .social-links .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    /* White text */
     text-align: center;
-    text-decoration: none; /* No underline */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Adjust font size */
+    text-decoration: none;
+    /* No underline */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Adjust font size */
 }
 
 .social-links .button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
+    /* Darker green on hover */
 }
 
 .footer-links .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    /* White text */
     text-align: center;
-    text-decoration: none; /* No underline */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Adjust font size */
+    text-decoration: none;
+    /* No underline */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Adjust font size */
 }
 
 .footer-links .button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
+    /* Darker green on hover */
 }
