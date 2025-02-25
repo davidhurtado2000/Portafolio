@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const contentDiv = document.getElementById("content");
 
     const contentMap = {
-        "div1": `<div class="row "><div class="col-6"><h1>${services[0].title}</h1><span>${serviceContent[0]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[0].imgSrc}" class="img-thumbnail content-image"></div></div>`,
-        "div2": `<div class="row "><div class="col-6"><h1>${services[1].title}</h1><span>${serviceContent[1]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[1].imgSrc}" class="img-thumbnail content-image"></div></div>`,
-        "div3": `<div class="row "><div class="col-6"><h1>${services[2].title}</h1><span>${serviceContent[2]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[2].imgSrc}" class="img-thumbnail content-image"></div></div>`,
-        "div4": `<div class="row "><div class="col-6"><h1>${services[3].title}</h1><span>${serviceContent[3]}</span></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[3].imgSrc}" class="img-thumbnail content-image"></div></div>`,
+        "div1": `<div class="row "><div class="col-6"><h1>${services[0].title}</h1><span class="service-info">${serviceContent[0]}</span><br><a href="contact.html" class="button my-5" >Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[0].imgSrc}" class="img-thumbnail content-image"></div></div>`,
+        "div2": `<div class="row "><div class="col-6"><h1>${services[1].title}</h1><span class="service-info">${serviceContent[1]}</span><br><a href="contact.html" class="button my-5">Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[1].imgSrc}" class="img-thumbnail content-image"></div></div>`,
+        "div3": `<div class="row "><div class="col-6"><h1>${services[2].title}</h1><span class="service-info">${serviceContent[2]}</span><br><a href="contact.html" class="button my-5">Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[2].imgSrc}" class="img-thumbnail content-image"></div></div>`,
+        "div4": `<div class="row "><div class="col-6"><h1>${services[3].title}</h1><span class="service-info">${serviceContent[3]}</span><br><a href="contact.html" class="button my-5" >Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[3].imgSrc}" class="img-thumbnail content-image"></div></div>`,
     };
 
     services.forEach((service, index) => {

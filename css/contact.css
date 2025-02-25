@@ -55,6 +55,11 @@ body {
     font-size: 20px;
 }
 
+.text {
+    font-weight: 800 !important;
+    color: white !important;
+}
+
 .site-title h1{
     color: white;
     font-weight: 900 !important;
@@ -64,79 +69,10 @@ body {
     padding: 100px !important;
 }
 
-.service-section {
-    color: white;
-}
-
-.section-model {
-    background-color: rgba(16, 21, 46, 0.8);
-    padding: 50px;
-    border-radius: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    transition: transform 0.3s, box-shadow 0.3s;
-
-}
-
-
-.clickable-div {
-    flex: 1;
-    cursor: pointer;
-}
-
-
-.section-model.selected {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #48beec;
-
-}
-
-.section-model.selected:hover {
-    background-color: #66c9ea;
-
-}
-
-.section-model img {
+iframe {
+    background-color: transparent;
     width: 100%;
-    height: auto;
-}
-
-.content-services {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-
-.text {
-    font-weight: 800 !important;
-    color: white !important;
-}
-
-.service-img {
-    background-color: transparent !important; 
-    border: none !important;
-}
-
-.content-image {
-    background-color: transparent !important;
-    border: none !important;
-    width: 300;
-}
-
-.service-info {
-    font-size: 20px;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4c6baf; /* Green background */
-    color: white; /* White text */
-    text-align: center;
-    text-decoration: none; /* No underline */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Adjust font size */
+    height: 80vh;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
 }
