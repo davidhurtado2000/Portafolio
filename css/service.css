@@ -3,8 +3,8 @@ body {
     margin: 0;
     height: 100vh;
     background: linear-gradient(-45deg, #10152e, #001f3f, #003f3f, #013220);
-    background-size: 2000% 2000%;
-    animation: gradient 15s ease infinite;
+    background-size: 5000% 5000%;
+    animation: gradient 30s ease infinite;
     font-family: "Inter", serif !important;
 }
 
