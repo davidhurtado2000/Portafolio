@@ -39,3 +39,10 @@
         border-color: white;
     }
 }
+
+#home {
+    width: 100% !important; /* Ensure full width */
+    margin: 0 !important; /* Remove default margins */
+    padding: 0 !important; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}

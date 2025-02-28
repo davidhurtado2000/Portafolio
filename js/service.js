@@ -4,20 +4,16 @@ window.addEventListener('scroll', function () {
         navbar.classList.add('navbar-transparent');
     } else {
         navbar.classList.remove('navbar-transparent');
-
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
-
     const serviceContent = [
         "Transform your ideas into functional and dynamic web applications. Using the latest technologies in HTML, CSS, and JavaScript, I build robust applications that are tailored to your specific needs and goals.",
         "Create visually appealing and user-friendly designs that captivate your audience. From layout to interactive elements, I focus on delivering seamless and intuitive user experiences that keep users engaged.",
         "Ensure your systems run smoothly with comprehensive maintenance services. Whether it's troubleshooting software issues or performing hardware upgrades, I provide reliable solutions to keep your technology in top shape.",
         "Empower yourself with knowledge through expert consulting and teaching. Whether you're looking to improve your coding skills or need guidance on your next tech project, I offer personalized training and advice to help you succeed."
     ];
-
 
     const services = [
         {
@@ -49,50 +45,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const servicesContainer = document.getElementById("services-container");
     const contentDiv = document.getElementById("content");
 
-    const contentMap = {
-        "div1": `<div class="row "><div class="col-6"><h1>${services[0].title}</h1><span class="service-info">${serviceContent[0]}</span><br><a href="contact.html" class="button my-5" >Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[0].imgSrc}" class="img-thumbnail content-image"></div></div>`,
-        "div2": `<div class="row "><div class="col-6"><h1>${services[1].title}</h1><span class="service-info">${serviceContent[1]}</span><br><a href="contact.html" class="button my-5">Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[1].imgSrc}" class="img-thumbnail content-image"></div></div>`,
-        "div3": `<div class="row "><div class="col-6"><h1>${services[2].title}</h1><span class="service-info">${serviceContent[2]}</span><br><a href="contact.html" class="button my-5">Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[2].imgSrc}" class="img-thumbnail content-image"></div></div>`,
-        "div4": `<div class="row "><div class="col-6"><h1>${services[3].title}</h1><span class="service-info">${serviceContent[3]}</span><br><a href="contact.html" class="button my-5" >Contact Me</a></div><div class="col-6 d-flex justify-content-center align-items-center"><img src="${services[3].imgSrc}" class="img-thumbnail content-image"></div></div>`,
-    };
-
     services.forEach((service, index) => {
         const serviceDiv = document.createElement("div");
-        serviceDiv.className = "clickable-div col-3";
+        serviceDiv.className = "clickable-div col-sm-12 col-md-6 col-lg-3 text-center";
         serviceDiv.id = `div${index + 1}`;
 
         serviceDiv.innerHTML = `
-            <div class="col section-model">
-                <div class="row">
-                    <div class="col-12 my-4">
-                        <img src="${service.imgSrc}" class="img-thumbnail service-img" alt="${service.altText}" width="150">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="h4 h4-custom">${service.title}</p>
-                    </div>
-                </div>
+            <div class="section-model p-3">
+                <img src="${service.imgSrc}" class="img-thumbnail service-img" alt="${service.altText}" width="100">
+                <p class="h5 mt-2">${service.title}</p>
             </div>
         `;
 
         servicesContainer.appendChild(serviceDiv);
 
-        const sectionModel = serviceDiv.querySelector(".section-model");
-        const imgElement = serviceDiv.querySelector(".service-img");
-
-        sectionModel.addEventListener("click", () => {
+        serviceDiv.addEventListener("click", () => {
             document.querySelectorAll(".section-model").forEach(d => d.classList.remove("selected"));
-            document.querySelectorAll(".service-img").forEach(img => {
-                const index = [...img.closest(".clickable-div").parentElement.children].indexOf(img.closest(".clickable-div"));
-                img.src = services[index].imgSrc; // Reset all images
-            });
+            document.querySelectorAll(".service-img").forEach(img => img.src = services[img.closest(".clickable-div").id.replace("div", "") - 1].imgSrc);
+            
+            serviceDiv.querySelector(".section-model").classList.add("selected");
+            serviceDiv.querySelector(".service-img").src = service.selectedImgSrc;
 
-            sectionModel.classList.add("selected");
-            imgElement.src = service.selectedImgSrc; // Change the selected image
-
-            const id = serviceDiv.id;
-            contentDiv.innerHTML = contentMap[id];
+            contentDiv.innerHTML = `
+                <div class="row text-center mt-4">
+                    <div class="col-12 col-xl-4 mx-auto">
+                        <h2>${service.title}</h2>
+                        <p class="service-info">${serviceContent[index]}</p>
+                        <a href="contact.html" class="btn btn-primary mt-3">Contact Me</a>
+                    </div>
+                    <div class="col-12 col-xl-4 d-flex justify-content-center">
+                        <img src="${service.imgSrc}" class="img-fluid content-image">
+                    </div>
+                </div>
+            `;
         });
     });
 });

@@ -18,94 +18,91 @@
 </head>
 
 <body >
-    <nav class="navbar navbar-expand-lg navbar-custom navbar-transparent ctn-delay">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<nav class="navbar navbar-expand-lg navbar-custom navbar-transparent ctn-delay">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/webicon.png" alt="Brand" width="70" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav d-flex gap-5">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="view/services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="view/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <div class="d-flex align-items-center gap-5">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/webicon.png" alt="Brand" width="70" height="50">
-                    </a>
-                    <ul class="navbar-nav d-flex gap-5">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="view/services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="view/contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+
+
+
+
+
+<div class="container-fluid ctn-picture ctn-delay d-flex justify-content-center align-items-center" id="home">
+    <div class="row">
+        <div class="col-12 top-right text-end">
+            <img src="img/peru.png" alt="Peru Flag" class="flag-icon">
+            <img src="img/united-states.png" alt="USA Flag" class="flag-icon">
+        </div>
+    </div>
+    <div class="row pfp-name">
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center pfp-middle">
+            <img src="img/pfp.png" alt="Profile Picture" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start start-content">
+            <h1 id="wordstart" class="typing">
+                <span id="startText"></span><span class="caret">|</span>
+            </h1>
+            <h1 id="wordname" class="typing">
+                <span id="nameText"></span><span class="caret">|</span>
+            </h1>
+            <h3 id="wordcarrer" class="typing">
+                <span id="careerText"></span><span class="caret">|</span>
+            </h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank">
+                    <img src="img/linkedin.png" alt="Linkedin Profile">
+                </a>
+                <a href="https://github.com/davidhurtado2000" target="_blank">
+                    <img src="img/github.png" alt="Github Profile">
+                </a>
+                <a href="pdf/DavidHurtadoResume.pdf" class="button" target="_blank">Download CV</a>
             </div>
         </div>
-    </nav>
-
-
-
-
-
-
-    <div class="container-fluid ctn-picture ctn-delay d-flex justify-content-center align-items-center" id="home">
-        <div class="row">
-            <div class="col-12 top-right text-end">
-                <img src="img/peru.png" alt="Peru Flag" class="flag-icon">
-                <img src="img/united-states.png" alt="USA Flag" class="flag-icon">
-            </div>
-        </div>
-        <div class="row pfp-name">
-            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center pfp-middle">
-                <img src="img/pfp.png" alt="Profile Picture" class="img-fluid">
-            </div>
-            <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start start-content">
-                <h1 id="wordstart" class="typing">
-                    <span id="startText"></span><span class="caret">|</span>
-                </h1>
-                <h1 id="wordname" class="typing">
-                    <span id="nameText"></span><span class="caret">|</span>
-                </h1>
-                <h3 id="wordcarrer" class="typing">
-                    <span id="careerText"></span><span class="caret">|</span>
-                </h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank">
-                        <img src="img/linkedin.png" alt="Linkedin Profile">
-                    </a>
-                    <a href="https://github.com/davidhurtado2000" target="_blank">
-                        <img src="img/github.png" alt="Github Profile">
-                    </a>
-                    <a href="pdf/DavidHurtadoResume.pdf" class="button" target="_blank">Download CV</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 middle-bottom" onclick="location.href = '#about'">
-                <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
-                    <div class="scroll-prompt-arrow-container">
-                        <div class="scroll-prompt-arrow">
-                            <div></div>
-                        </div>
-                        <div class="scroll-prompt-arrow">
-                            <div></div>
-                        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 middle-bottom" onclick="location.href = '#about'">
+            <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+                <div class="scroll-prompt-arrow-container">
+                    <div class="scroll-prompt-arrow">
+                        <div></div>
+                    </div>
+                    <div class="scroll-prompt-arrow">
+                        <div></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
     <div class="container ctn-main ctn-delay">
         <div class="row">
-            <div class="col-6 fixed" id="fixed-content">
+            <div class="col-12 col-md-6 fixed" id="fixed-content">
                 <div class="col-12">
                     <a href="index.html">
                         <h1 class="nameTitle"> <b>DAVID HURTADO</b></h1>
@@ -141,7 +138,7 @@
                     <a href="pdf/DavidHurtadoResume.pdf" class="button" target="_blank">Download CV</a>
                 </footer>
             </div>
-            <div class="col-6 offset" id="offset-content">
+            <div class="col-12 col-md-6  offset" id="offset-content">
                 <section id="about">
                     <h2 class="page-title">ABOUT ME</h2>
                     <div id="about-section"></div>

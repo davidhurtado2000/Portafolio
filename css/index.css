@@ -107,6 +107,8 @@ a:active {
     }
 }
 
+/*NAVBAR SECTION*/
+
 .navbar-custom {
     position: fixed !important;
     top: 20px;
@@ -114,9 +116,10 @@ a:active {
     transform: translateX(-50%);
     border-radius: 15px;
     background-color: rgba(16, 21, 46, 0.8);
-    width: 40%;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+    width: 60%; /* Make it wider by default */
+    max-width: 800px; /* Set a max-width for larger screens */
+    z-index: 500;
+    transition: background-color 0.3s ease, width 0.3s ease;
     padding: 10px 20px;
 }
 
@@ -135,9 +138,34 @@ a:active {
     background-color: transparent;
 }
 
+
 .navbar-nav a {
     font-weight: 800;
     font-size: 20px;
+}
+
+.navbar-toggler {
+    border-color: white !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-custom {
+        width: 60% !important; /* Make navbar take up most of the screen */
+        padding: 10px !important;
+    }
+
+    .navbar-nav {
+        gap: 10px !important; /* Reduce gap between nav items */
+        background-color: #161b36cf;
+    }
+
+    .navbar-brand {
+        margin-right: auto; /* Push brand to the left */
+    }
 }
 
 /*Social Media Links for Fixed Div*/
@@ -272,6 +300,9 @@ a.project-link:hover {
 }
 
 .ctn-picture {
+    position: relative;
+    z-index: 1;
+    padding: 80px;
     width: 100%;
     color: white;
     background-color: rgba(66, 16, 52, 0.333);
@@ -313,6 +344,8 @@ a.project-link:hover {
 
 
 
+
+
 .ctn-picture h1,
 .ctn-picture h3,
 .ctn-picture a {
@@ -338,6 +371,7 @@ a.project-link:hover {
     right: 0;
     margin: 10px;
     text-align: right;
+    z-index: 2;
 }
 
 .middle-bottom {
@@ -396,4 +430,93 @@ a.project-link:hover {
 .footer-links .button:hover {
     background-color: #45a049;
     /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+    .ctn-picture {
+        height: midd; /* Allow the section to grow with content */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .pfp-name {
+        flex-direction: column; /* Stack profile picture and text vertically */
+        align-items: center; /* Center align content */
+        margin-left: 0 !important; /* Remove left margin */
+    }
+
+    .pfp-middle img {
+        margin-right: 0 !important; /* Remove right margin */
+        width: 200px; /* Adjust image size */
+        height: 200px;
+    }
+
+    .start-content {
+        padding-top: 20px; /* Reduce top padding */
+        text-align: center; /* Center align text */
+    }
+
+    .flag-icon {
+        width: 40px !important; /* Reduce flag size */
+        height: 40px !important;
+        margin-right: 10px !important; /* Reduce margin */
+    }
+
+    .top-right {
+        top: 10px !important; /* Adjust top position */
+        right: 10px !important; /* Adjust right position */
+    }
+    .fixed{
+        position: relative !important; /* Disable fixed positioning */
+        width: 100% !important; /* Take full width */
+        height: auto !important; /* Allow height to grow */
+        top: 0 !important; /* Reset top position */
+    }
+
+    .offset {
+        margin-left: 0 !important; /* Reset margin */
+        width: 100% !important; /* Take full width */
+    }
+
+    .ctn-main {
+        margin-top: 50px !important; /* Reduce top margin */
+    }
+
+    .footer-links {
+        margin-top: 2rem !important; /* Reduce top margin */
+        text-align: center; /* Center align content */
+    }
+
+    .footer-links a {
+        margin: 0 5px; /* Reduce margin between links */
+    }
+
+    .footer-links img {
+        width: 24px; /* Reduce icon size */
+        height: 24px;
+    }
+
+    #wordname {
+        font-size: 30px !important; /* Reduce font size */
+    }
+
+    #wordstart {
+        font-size: 30px !important; /* Reduce font size */
+    }
+
+    #wordcarrer {
+        font-size: 20px !important; /* Reduce font size */
+    }
+
+    .fixed.active {
+        position: relative !important; /* Disable fixed positioning */
+        width: 100% !important; /* Take full width */
+        height: auto !important; /* Allow height to grow */
+        top: 0 !important; /* Reset top position */
+        scrollbar-width: none; /* Hide scrollbar */
+    }
+
+    .offset.active {
+        margin-left: 0 !important; /* Reset margin */
+        width: 100% !important; /* Take full width */
+    }
 }
