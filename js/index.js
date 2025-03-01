@@ -1,22 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Smooth scroll with offset function
     function smoothScrollWithOffset(event) {
-        event.preventDefault(); // Prevent default anchor behavior
-
-        // Get the target section ID from either href or data-target
         const targetId = this.getAttribute('href') || this.getAttribute('data-target');
-        const targetSection = document.querySelector(targetId); // Find the target section
 
-        if (targetSection) {
-            const offset = 100; // Adjust this value for the desired space at the top
-            const targetPosition = targetSection.offsetTop - offset; // Calculate the scroll position with offset
+        // Check if the link points to a section on the same page (e.g., #about)
+        if (targetId.startsWith('#')) {
+            event.preventDefault(); // Prevent default anchor behavior only for same-page links
 
-            // Smooth scroll to the target position
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+            const targetSection = document.querySelector(targetId); // Find the target section
+            if (targetSection) {
+                const offset = 100; // Adjust this value for the desired space at the top
+                const targetPosition = targetSection.offsetTop - offset; // Calculate the scroll position with offset
+
+                // Smooth scroll to the target position
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
+        // If the link points to another page (e.g., view/services.html), allow default behavior
     }
 
     // Add event listeners to navbar links
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollPromptDiv.addEventListener('click', smoothScrollWithOffset);
     }
 });
+
 // Highlight activation for sections
 document.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section');
@@ -128,10 +132,10 @@ document.addEventListener('DOMContentLoaded', function () {
         projectDiv.onclick = () => location.href = project.link;
 
         projectDiv.innerHTML = `
-            <div class="col-3 text-center project-img">
-                <img src="${project.imgSrc}" class="rounded mx-auto d-block" alt="${project.altText}" height="100" width="150">
+            <div class="col-md-3 col-12 text-center project-img">
+                <img src="${project.imgSrc}" class="img-fluid rounded" alt="${project.altText}">
             </div>
-            <div class="col-9">
+            <div class="col-md-9 col-12">
                 <div>
                     <span class="project-title">${project.title}</span>
                 </div>
@@ -144,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function () {
         projectsContainer.appendChild(projectDiv);
     });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     const experiences = [
         {
