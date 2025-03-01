@@ -126,7 +126,6 @@ body {
 }
 
 .section-model img {
-    width: 100%;
     height: auto;
 }
 
@@ -222,7 +221,8 @@ body {
     }
 
     .content-image {
-        width: 100% !important;
+        margin-top: 30px;
+        width: 50% !important;
         height: auto !important;
     }
 
@@ -255,7 +255,7 @@ body {
         padding: 10px !important;
     }
     .service-img {
-        width: 50px !important;
-        height: 50px !important;
+        width: 100px !important;
+        height: 100px !important;
     }
 }

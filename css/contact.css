@@ -29,9 +29,10 @@ body {
     transform: translateX(-50%);
     border-radius: 15px;
     background-color: rgba(16, 21, 46, 0.8);
-    width: 40%;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+    width: 60%; /* Make it wider by default */
+    max-width: 800px; /* Set a max-width for larger screens */
+    z-index: 500;
+    transition: background-color 0.3s ease, width 0.3s ease;
     padding: 10px 20px;
 }
 
@@ -50,10 +51,35 @@ body {
     background-color: transparent;
 }
 
-.navbar-nav a{
+.navbar-nav a {
     font-weight: 800;
     font-size: 20px;
 }
+
+.navbar-toggler {
+    border-color: white !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-custom {
+        width: 80% !important; /* Make navbar take up most of the screen */
+        padding: 10px !important;
+    }
+
+    .navbar-nav {
+        gap: 10px !important; /* Reduce gap between nav items */
+        background-color: #161b36cf;
+    }
+
+    .navbar-brand {
+        margin-right: auto; /* Push brand to the left */
+    }
+}
+
 
 .text {
     font-weight: 800 !important;
