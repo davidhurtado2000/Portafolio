@@ -53,6 +53,7 @@ body {
     background-color: transparent;
 }
 
+
 .navbar-nav a {
     font-weight: 800;
     font-size: 20px;
@@ -68,7 +69,7 @@ body {
 
 @media (max-width: 768px) {
     .navbar-custom {
-        width: 80% !important; /* Make navbar take up most of the screen */
+        width: 60% !important; /* Make navbar take up most of the screen */
         padding: 10px !important;
     }
 
@@ -181,19 +182,6 @@ body {
 
 
 @media (max-width: 768px) {
-    .navbar-custom {
-        width: 90% !important;
-        padding: 10px !important;
-    }
-
-    .navbar-nav {
-        gap: 10px !important;
-    }
-
-    .navbar-brand {
-        margin-right: auto;
-    }
-
     .clickable-div {
         flex: 1 1 100% !important;
         margin-bottom: 20px;
