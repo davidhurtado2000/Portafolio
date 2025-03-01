@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: "Downstream",
             imgSrc: "img/Downstream.png",
             altText: "Downstream",
-            description: "Youtube downloader built with Electron colaborated with Weston Rivers (Student of theCoderSchool). It allows users to download videos. It uses libraries like FFmpeg and YouTube-dl for fast and reliable downloads",
+            description: "Youtube downloader built with Electron collaborated with Weston Rivers (Student of theCoderSchool). It allows users to download videos. It uses libraries like FFmpeg and YouTube-dl for fast and reliable downloads",
             link: "https://github.com/StrataBytes/Downstream"
         },
         {
@@ -129,7 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
     projects.forEach(project => {
         const projectDiv = document.createElement("div");
         projectDiv.className = "row pjt-section mt-4 mb-5";
-        projectDiv.onclick = () => location.href = project.link;
+        projectDiv.style.cursor = "pointer";
+        projectDiv.onclick = () => window.open(project.link, '_blank');
 
         projectDiv.innerHTML = `
             <div class="col-md-3 col-12 text-center project-img">
@@ -148,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
         projectsContainer.appendChild(projectDiv);
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const experiences = [
         {
