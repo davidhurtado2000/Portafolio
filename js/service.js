@@ -6,7 +6,6 @@ window.addEventListener('scroll', function () {
         navbar.classList.remove('navbar-transparent');
     }
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     const serviceContent = [
         "Transform your ideas into functional and dynamic web applications. Using the latest technologies in HTML, CSS, and JavaScript, I build robust applications that are tailored to your specific needs and goals.",
@@ -45,6 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const servicesContainer = document.getElementById("services-container");
     const contentDiv = document.getElementById("content");
 
+    if (!servicesContainer || !contentDiv) {
+        console.error("Required DOM elements not found!");
+        return;
+    }
+
     services.forEach((service, index) => {
         const serviceDiv = document.createElement("div");
         serviceDiv.className = "clickable-div col-sm-12 col-md-6 col-lg-3 text-center";
@@ -60,24 +64,22 @@ document.addEventListener("DOMContentLoaded", function () {
         servicesContainer.appendChild(serviceDiv);
 
         serviceDiv.addEventListener("click", () => {
-            document.querySelectorAll(".section-model").forEach(d => d.classList.remove("selected"));
-            document.querySelectorAll(".service-img").forEach(img => img.src = services[img.closest(".clickable-div").id.replace("div", "") - 1].imgSrc);
-            
-            serviceDiv.querySelector(".section-model").classList.add("selected");
-            serviceDiv.querySelector(".service-img").src = service.selectedImgSrc;
-
+            // Update the content
             contentDiv.innerHTML = `
                 <div class="row text-center mt-4">
                     <div class="col-12 col-xl-4 mx-auto">
                         <h2>${service.title}</h2>
                         <p class="service-info">${serviceContent[index]}</p>
-                        <a href="contact.html" class="btn btn-primary mt-3">Contact Me</a>
+                        <a href="contact.html" class="btn btn-primary mt-3" id="button">Contact Me</a>
                     </div>
                     <div class="col-12 col-xl-4 d-flex justify-content-center">
                         <img src="${service.imgSrc}" class="img-fluid content-image">
                     </div>
                 </div>
             `;
+
+            // Scroll to the button
+            document.getElementById("button").scrollIntoView({ behavior: "smooth" });
         });
     });
 });

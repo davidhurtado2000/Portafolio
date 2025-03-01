@@ -381,6 +381,7 @@ a.project-link:hover {
     transform: translateX(-50%);
     margin: 10px;
     text-align: center;
+    cursor: pointer;
 }
 
 
