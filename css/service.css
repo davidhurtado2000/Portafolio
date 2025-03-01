@@ -96,17 +96,27 @@ body {
     color: white;
 }
 
+
+
 .section-model {
     background-color: rgba(16, 21, 46, 0.8);
     padding: 50px;
     border-radius: 15px;
     margin-top: 50px;
     margin-bottom: 50px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     min-height: 220px;
-
 }
 
+.section-model.selected {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    background-color: #48beec !important;
+}
+
+.section-model.selected:hover {
+    background-color: #66c9ea !important;
+}
 
 .clickable-div {
     flex: 1;
@@ -114,16 +124,11 @@ body {
 }
 
 
-.section-model.selected {
+
+.clickable-div:hover .section-model {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #48beec;
-
-}
-
-.section-model.selected:hover {
-    background-color: #66c9ea;
-
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust the color as needed */
 }
 
 .section-model img {

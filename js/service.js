@@ -1,11 +1,3 @@
-window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar-custom');
-    if (window.scrollY == 0) {
-        navbar.classList.add('navbar-transparent');
-    } else {
-        navbar.classList.remove('navbar-transparent');
-    }
-});
 document.addEventListener("DOMContentLoaded", function () {
     const serviceContent = [
         "Transform your ideas into functional and dynamic web applications. Using the latest technologies in HTML, CSS, and JavaScript, I build robust applications that are tailored to your specific needs and goals.",
@@ -15,30 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const services = [
-        {
-            imgSrc: "../img/services/html.png",
-            selectedImgSrc: "../img/services/html_selected.png",
-            altText: "Web Application Development",
-            title: "Web & Application Development"
-        },
-        {
-            imgSrc: "../img/services/computer.png",
-            selectedImgSrc: "../img/services/computer_selected.png",
-            altText: "Design and User Experience",
-            title: "Design and User Experience"
-        },
-        {
-            imgSrc: "../img/services/maintenance.png",
-            selectedImgSrc: "../img/services/maintenance_selected.png",
-            altText: "Software and Hardware Maintenance",
-            title: "Software/Hardware Maintenance"
-        },
-        {
-            imgSrc: "../img/services/consulting.png",
-            selectedImgSrc: "../img/services/consulting_selected.png",
-            altText: "Consulting and Training",
-            title: "Consulting and Training"
-        }
+        { imgSrc: "../img/services/html.png", selectedImgSrc: "../img/services/html_selected.png", altText: "Web Application Development", title: "Web & Application Development" },
+        { imgSrc: "../img/services/computer.png", selectedImgSrc: "../img/services/computer_selected.png", altText: "Design and User Experience", title: "Design and User Experience" },
+        { imgSrc: "../img/services/maintenance.png", selectedImgSrc: "../img/services/maintenance_selected.png", altText: "Software and Hardware Maintenance", title: "Software/Hardware Maintenance" },
+        { imgSrc: "../img/services/consulting.png", selectedImgSrc: "../img/services/consulting_selected.png", altText: "Consulting and Training", title: "Consulting and Training" }
     ];
 
     const servicesContainer = document.getElementById("services-container");
@@ -64,6 +36,22 @@ document.addEventListener("DOMContentLoaded", function () {
         servicesContainer.appendChild(serviceDiv);
 
         serviceDiv.addEventListener("click", () => {
+            // Remove .selected class and reset images for all sections
+            document.querySelectorAll(".section-model").forEach(section => {
+                section.classList.remove("selected");
+                const img = section.querySelector("img");
+                const serviceIndex = Array.from(servicesContainer.children).indexOf(section.parentElement);
+                img.src = services[serviceIndex].imgSrc; // Reset to default image
+            });
+
+            // Add .selected class to the clicked section
+            const clickedSection = serviceDiv.querySelector(".section-model");
+            clickedSection.classList.add("selected");
+
+            // Switch to the selected image
+            const clickedImage = clickedSection.querySelector("img");
+            clickedImage.src = service.selectedImgSrc;
+
             // Update the content
             contentDiv.innerHTML = `
                 <div class="row text-center mt-4">
