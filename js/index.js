@@ -1,7 +1,3 @@
-// index.js
-import { Translate } from './translations.js'; // Use './' for relative path
-import { startTypingAnimation } from './typing.js'; // Import the function
-
 document.addEventListener('DOMContentLoaded', function () {
     // Smooth scroll with offset function
     function smoothScrollWithOffset(event) {
@@ -86,82 +82,6 @@ document.addEventListener('scroll', function () {
     }
 });
 
-//Translation code
-
-const path = 'json/translations.json'; // Path to translations JSON file for index.html
-const translator = new Translate(path);
-
-// Define a callback to update page-specific content
-function updateIndexContent(translations) {
-    // Update static content
-    document.querySelector('.nameTitle').textContent = translations.name;
-    document.querySelector('.side-text-about').textContent = translations.aboutTitle;
-    document.querySelector('.side-text-exp').textContent = translations.experienceTitle;
-    document.querySelector('.side-text-prj').textContent = translations.projectsTitle;
-    document.querySelector('.cv-button').textContent = translations.downloadCV;
-    document.querySelector('#about h2').textContent = translations.aboutTitle;
-    document.querySelector('#experience h2').textContent = translations.experienceTitle;
-    document.querySelector('#projects h2').textContent = translations.projectsTitle;
-    document.querySelector('.button').textContent = translations.downloadCV;
-
-    // Update about section
-    const aboutSection = document.getElementById('about-section');
-    aboutSection.innerHTML = translations.aboutContent.map(text => `<div class="about-text">${text}</div>`).join('');
-
-    // Update projects section
-    const projectsContainer = document.getElementById('projects-container');
-    projectsContainer.innerHTML = translations.projects
-        .map(project => `
-            <div class="row pjt-section mt-4 mb-5" style="cursor: pointer;" onclick="window.open('${project.link}', '_blank')">
-                <div class="col-md-3 col-12 text-center project-img">
-                    <img src="${project.imgSrc}" class="img-fluid rounded" alt="${project.altText}">
-                </div>
-                <div class="col-md-9 col-12">
-                    <div>
-                        <span class="project-title">${project.title}</span>
-                    </div>
-                    <div class="my-1 exp-text">
-                        <span>${project.description}</span>
-                    </div>
-                </div>
-            </div>
-        `)
-        .join('');
-
-    // Update experiences section
-    const experienceContainer = document.getElementById('experience-container');
-    experienceContainer.innerHTML = translations.experiences
-        .map(experience => `
-            <div class="row">
-                <div class="col-3 text-center">
-                    <span>${experience.period}</span>
-                </div>
-                <div class="col-9">
-                    <div>${experience.title}</div>
-                    <div class="my-1 exp-text">
-                        <span>${experience.description}</span>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <div class="row">
-                            ${experience.skills.map(skill => `<div class="col-3 lang-section">${skill}</div>`).join('')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `)
-        .join('');
-
-    // Trigger typing animation after content is updated
-    startTypingAnimation(translations);
-}
-
-// Initialize with saved language
-translator.initSavedLanguage(updateIndexContent);
-
-// Expose changeLanguage to global scope for button clicks
-window.changeLanguage = (lang) => translator.changeLanguage(lang, updateIndexContent);
-
-/*
 function aboutInfo() {
     const aboutContent = [
         "I'm a passionate <strong>Software Engineer</strong> with a strong foundation in full-stack development, specializing in <strong>Java, JavaScript, PHP, Python and SQL</strong>. With a background in <strong>computer engineering</strong> and hands-on experience in <strong>web development, database management, and cloud computing</strong>, I thrive on building scalable and efficient software solutions.",
@@ -273,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
         experienceContainer.appendChild(experienceDiv);
     });
 });
-*/
+
 
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar-custom');
@@ -286,3 +206,4 @@ window.addEventListener('scroll', function () {
 });
 
 //Init functions for info
+aboutInfo();
