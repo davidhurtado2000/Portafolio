@@ -185,6 +185,20 @@ body {
     }
 }
 
+.flag-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 25px;
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    text-align: right;
+    z-index: 2;
+}
 
 @media (max-width: 768px) {
     .clickable-div {
@@ -250,5 +264,16 @@ body {
     .service-img {
         width: 100px !important;
         height: 100px !important;
+    }
+
+    .flag-icon {
+        width: 40px !important; /* Reduce flag size */
+        height: 40px !important;
+        margin-right: 10px !important; /* Reduce margin */
+    }
+
+    .top-right {
+        top: 10px !important; /* Adjust top position */
+        right: 10px !important; /* Adjust right position */
     }
 }
