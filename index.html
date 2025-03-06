@@ -17,87 +17,92 @@
         rel="stylesheet">
 </head>
 
-<body >
-<nav class="navbar navbar-expand-lg navbar-custom navbar-transparent ctn-delay">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-            <img src="img/webicon.png" alt="Brand" width="70" height="50">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav d-flex gap-5">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="view/services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="view/contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-
-
-
-
-<div class="container-fluid ctn-picture ctn-delay d-flex justify-content-center align-items-center" id="home">
-    <div class="row">
-        <div class="col-12 top-right text-end">
-            <img src="img/peru.png" alt="Peru Flag" class="flag-icon">
-            <img src="img/united-states.png" alt="USA Flag" class="flag-icon">
-        </div>
-    </div>
-    <div class="row pfp-name">
-        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center pfp-middle">
-            <img src="img/pfp.png" alt="Profile Picture" class="img-fluid">
-        </div>
-        <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start start-content">
-            <h1 id="wordstart" class="typing">
-                <span id="startText"></span><span class="caret">|</span>
-            </h1>
-            <h1 id="wordname" class="typing">
-                <span id="nameText"></span><span class="caret">|</span>
-            </h1>
-            <h3 id="wordcarrer" class="typing">
-                <span id="careerText"></span><span class="caret">|</span>
-            </h3>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank">
-                    <img src="img/linkedin.png" alt="Linkedin Profile">
-                </a>
-                <a href="https://github.com/davidhurtado2000" target="_blank">
-                    <img src="img/github.png" alt="Github Profile">
-                </a>
-                <a href="pdf/DavidHurtadoResume.pdf" class="button" target="_blank">Download CV</a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-transparent ctn-delay">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/webicon.png" alt="Brand" width="70" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav d-flex gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home" data-translate="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-translate="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view/services.html" data-translate="services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view/contact.html" data-translate="contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 middle-bottom" data-target="#about">
-            <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
-                <div class="scroll-prompt-arrow-container">
-                    <div class="scroll-prompt-arrow">
-                        <div></div>
-                    </div>
-                    <div class="scroll-prompt-arrow">
-                        <div></div>
+    </nav>
+
+
+
+
+
+    <div class="container-fluid ctn-picture ctn-delay d-flex justify-content-center align-items-center" id="home">
+        <div class="row">
+            <div class="col-12 top-right text-end">
+                <div class="flag-button-group">
+                    <img src="img/peru.png" alt="Peru Flag" class="flag-icon">
+                    <button class="language-button" onclick="changeLanguage('es')">Español</button>
+                </div>
+                <div class="flag-button-group">
+                    <img src="img/united-states.png" alt="USA Flag" class="flag-icon">
+                    <button class="language-button" onclick="changeLanguage('en')">English</button>
+                </div>
+            </div>
+        </div>
+        <div class="row pfp-name">
+            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center pfp-middle">
+                <img src="img/pfp.png" alt="Profile Picture" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start start-content">
+                <h1 id="wordstart" class="typing">
+                    <span id="startText"></span><span class="caret">|</span>
+                </h1>
+                <h1 id="wordname" class="typing">
+                    <span id="nameText"></span><span class="caret">|</span>
+                </h1>
+                <h3 id="wordcarrer" class="typing">
+                    <span id="careerText"></span><span class="caret">|</span>
+                </h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/david-h-2256a5217/" target="_blank">
+                        <img src="img/linkedin.png" alt="Linkedin Profile">
+                    </a>
+                    <a href="https://github.com/davidhurtado2000" target="_blank">
+                        <img src="img/github.png" alt="Github Profile">
+                    </a>
+                    <a href="pdf/DavidHurtadoResume.pdf" class="button" target="_blank">Download CV</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 middle-bottom" data-target="#about">
+                <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+                    <div class="scroll-prompt-arrow-container">
+                        <div class="scroll-prompt-arrow">
+                            <div></div>
+                        </div>
+                        <div class="scroll-prompt-arrow">
+                            <div></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
     <div class="container ctn-main ctn-delay">
@@ -118,15 +123,15 @@
                 <div class="toc">
                     <a href="#about" class="nav-link">
                         <span class="symb">→</span>
-                        <span>ABOUT ME</span>
+                        <span class="side-text-about"></span>
                     </a>
                     <a href="#experience" class="nav-link">
                         <span class="symb">→</span>
-                        <span>EXPERIENCE</span>
+                        <span class="side-text-exp"></span>
                     </a>
                     <a href="#projects" class="nav-link">
                         <span class="symb">→</span>
-                        <span>PROJECTS</span>
+                        <span class="side-text-prj"></span>
                     </a>
                 </div>
 
@@ -135,7 +140,7 @@
                             alt="Linkedin Profile"></a>
                     <a href="https://github.com/davidhurtado2000" target="_blank"><img src="img\github.png"
                             alt="Github Profile"></a>
-                    <a href="pdf/DavidHurtadoResume.pdf" class="button" target="_blank">Download CV</a>
+                    <a href="pdf/DavidHurtadoResume.pdf" class="button cv-button" target="_blank">Download CV</a>
                 </footer>
             </div>
             <div class="col-12 col-md-6  offset" id="offset-content">
@@ -157,8 +162,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/typing.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/typing.js"></script>
 </body>
 
 

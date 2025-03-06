@@ -1,0 +1,34 @@
+{
+    "en": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact",
+      "servicesTitle": "I create solutions that fit your needs",
+      "service1Title": "Web & Application Development",
+      "service1": "Transform your ideas into functional and dynamic web applications. Using the latest technologies in HTML, CSS, and JavaScript, I build robust applications that are tailored to your specific needs and goals.",
+      "service2Title": "Design and User Experience",
+      "service2": "Create visually appealing and user-friendly designs that captivate your audience. From layout to interactive elements, I focus on delivering seamless and intuitive user experiences that keep users engaged.",
+      "service3Title": "Software/Hardware Maintenance",
+      "service3": "Ensure your systems run smoothly with comprehensive maintenance services. Whether it's troubleshooting software issues or performing hardware upgrades, I provide reliable solutions to keep your technology in top shape.",
+      "service4Title": "Consulting and Training",
+      "service4": "Empower yourself with knowledge through expert consulting and teaching. Whether you're looking to improve your coding skills or need guidance on your next tech project, I offer personalized training and advice to help you succeed.",
+      "contactMe": "Contact Me"
+    },
+    "es": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "services": "Servicios",
+      "contact": "Contacto",
+      "servicesTitle": "Creo soluciones que se adaptan a tus necesidades",
+      "service1Title": "Desarrollo Web y de Aplicaciones",
+      "service1": "Transforma tus ideas en aplicaciones web funcionales y dinámicas. Utilizando las últimas tecnologías en HTML, CSS y JavaScript, construyo aplicaciones robustas que se adaptan a tus necesidades y objetivos específicos.",
+      "service2Title": "Diseño y Experiencia de Usuario",
+      "service2": "Crea diseños visualmente atractivos y fáciles de usar que cautiven a tu audiencia. Desde el diseño hasta los elementos interactivos, me enfoco en ofrecer experiencias de usuario intuitivas y fluidas que mantengan a los usuarios comprometidos.",
+      "service3Title": "Mantenimiento de Software/Hardware",
+      "service3": "Asegura que tus sistemas funcionen sin problemas con servicios de mantenimiento completos. Ya sea solucionando problemas de software o realizando actualizaciones de hardware, ofrezco soluciones confiables para mantener tu tecnología en óptimas condiciones.",
+      "service4Title": "Consultoría y Capacitación",
+      "service4": "Empodérate con conocimiento a través de consultoría y enseñanza experta. Ya sea que desees mejorar tus habilidades de programación o necesites orientación para tu próximo proyecto tecnológico, ofrezco capacitación personalizada y consejos para ayudarte a tener éxito.",
+      "contactMe": "Contáctame"
+    }
+  }

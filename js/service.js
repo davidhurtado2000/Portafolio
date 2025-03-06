@@ -1,16 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const serviceContent = [
-        "Transform your ideas into functional and dynamic web applications. Using the latest technologies in HTML, CSS, and JavaScript, I build robust applications that are tailored to your specific needs and goals.",
-        "Create visually appealing and user-friendly designs that captivate your audience. From layout to interactive elements, I focus on delivering seamless and intuitive user experiences that keep users engaged.",
-        "Ensure your systems run smoothly with comprehensive maintenance services. Whether it's troubleshooting software issues or performing hardware upgrades, I provide reliable solutions to keep your technology in top shape.",
-        "Empower yourself with knowledge through expert consulting and teaching. Whether you're looking to improve your coding skills or need guidance on your next tech project, I offer personalized training and advice to help you succeed."
-    ];
+import { Translate } from './translations.js';
 
+const path = '../json/services.json'; // Path to translations JSON file
+const translator = new Translate(path);
+
+// Function to render services
+const renderServices = (translations) => {
+    console.log("Translations:", translations); // Debug: Check the translations object
+    console.log("servicesTitle:", translations.servicesTitle); // Debug: Check the servicesTitle value
+
+    // Update the services title
+    const servicesTitleElement = document.querySelector('[data-translate="servicesTitle"]');
+    if (servicesTitleElement) {
+        servicesTitleElement.textContent = translations.servicesTitle;
+    } else {
+        console.error("Element with data-translate='servicesTitle' not found!");
+    }
+
+    // Define services data using translations
     const services = [
-        { imgSrc: "../img/services/html.png", selectedImgSrc: "../img/services/html_selected.png", altText: "Web Application Development", title: "Web & Application Development" },
-        { imgSrc: "../img/services/computer.png", selectedImgSrc: "../img/services/computer_selected.png", altText: "Design and User Experience", title: "Design and User Experience" },
-        { imgSrc: "../img/services/maintenance.png", selectedImgSrc: "../img/services/maintenance_selected.png", altText: "Software and Hardware Maintenance", title: "Software/Hardware Maintenance" },
-        { imgSrc: "../img/services/consulting.png", selectedImgSrc: "../img/services/consulting_selected.png", altText: "Consulting and Training", title: "Consulting and Training" }
+        {
+            imgSrc: "../img/services/html.png",
+            selectedImgSrc: "../img/services/html_selected.png",
+            altText: translations.service1Title,
+            title: translations.service1Title,
+            description: translations.service1
+        },
+        {
+            imgSrc: "../img/services/computer.png",
+            selectedImgSrc: "../img/services/computer_selected.png",
+            altText: translations.service2Title,
+            title: translations.service2Title,
+            description: translations.service2
+        },
+        {
+            imgSrc: "../img/services/maintenance.png",
+            selectedImgSrc: "../img/services/maintenance_selected.png",
+            altText: translations.service3Title,
+            title: translations.service3Title,
+            description: translations.service3
+        },
+        {
+            imgSrc: "../img/services/consulting.png",
+            selectedImgSrc: "../img/services/consulting_selected.png",
+            altText: translations.service4Title,
+            title: translations.service4Title,
+            description: translations.service4
+        }
     ];
 
     const servicesContainer = document.getElementById("services-container");
@@ -21,6 +56,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
+    // Clear existing content
+    servicesContainer.innerHTML = '';
+    contentDiv.innerHTML = '';
+
+    // Render services
     services.forEach((service, index) => {
         const serviceDiv = document.createElement("div");
         serviceDiv.className = "clickable-div col-sm-12 col-md-6 col-lg-3 text-center";
@@ -57,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="row text-center mt-4">
                     <div class="col-12 col-xl-4 mx-auto">
                         <h2>${service.title}</h2>
-                        <p class="service-info">${serviceContent[index]}</p>
-                        <a href="contact.html" class="btn btn-primary mt-3" id="button">Contact Me</a>
+                        <p class="service-info">${service.description}</p>
+                        <a href="contact.html" class="btn btn-primary mt-3" id="button">${translations.contactMe}</a>
                     </div>
                     <div class="col-12 col-xl-4 d-flex justify-content-center">
                         <img src="${service.imgSrc}" class="img-fluid content-image">
@@ -70,4 +110,52 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("button").scrollIntoView({ behavior: "smooth" });
         });
     });
+};
+
+document.addEventListener("DOMContentLoaded", async function () {
+    // Load translations
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    const translations = await translator.translateTo(savedLanguage);
+
+    // Update the services title
+    const servicesTitleElement = document.querySelector('[data-translate="servicesTitle"]');
+    if (servicesTitleElement) {
+        servicesTitleElement.textContent = translations.servicesTitle;
+    } else {
+        console.error("Element with data-translate='servicesTitle' not found!");
+    }
+
+    // Render services for the first time
+    renderServices(translations);
+});
+
+translator.initSavedLanguage(renderServices);
+
+// Expose changeLanguage to global scope
+window.changeLanguage = (lang) => translator.changeLanguage(lang, renderServices);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector('.navbar-custom');
+
+    // Function to handle scroll event
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-solid');
+            navbar.classList.remove('navbar-transparent');
+        } else {
+            navbar.classList.remove('navbar-solid');
+            navbar.classList.add('navbar-transparent');
+        }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Initialize navbar background based on initial scroll position
+    handleScroll();
+});
+
+document.addEventListener("DOMContentLoaded", async function () {
+    // Initialize with saved language
+    translator.initSavedLanguage(renderServices);
 });

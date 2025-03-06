@@ -1,0 +1,16 @@
+{
+    "en": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact",
+      "contactTitle": "Let's Connect!"
+    },
+    "es": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "services": "Servicios",
+      "contact": "Contacto",
+      "contactTitle": "Conectemonos!"
+    }
+  }

@@ -114,3 +114,89 @@ iframe {
         opacity: 1;
     }
 }
+
+.flag-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 25px;
+}
+
+.top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    text-align: right;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .flag-icon {
+        width: 40px !important; /* Reduce flag size */
+        height: 40px !important;
+        margin-right: 10px !important; /* Reduce margin */
+    }
+
+    .top-right {
+        top: 10px !important; /* Adjust top position */
+        right: 10px !important; /* Adjust right position */
+    }
+}
+
+.language-button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 1em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 0.5rem 1rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .language-button:hover {
+    background-color: #29fbff;
+    box-shadow: #14d8ff 0 -6px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .language-button:active {
+    transform: scale(1.025);
+  }
+
+  .language-button:disabled {
+    background-color: #c6c6c698;
+    box-shadow: #9c9c9c76 0 -6px 8px inset;
+  }
+
+  @media (max-width: 768px) {
+    .language-button {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
+    }
+
+    .flag-icon {
+        width: 30px; /* Smaller flags for smaller screens */
+    }
+
+    .language-button {
+        font-size: 12px; /* Smaller font size for buttons */
+        padding: 4px 8px; /* Smaller padding for buttons */
+    }
+    
+  }

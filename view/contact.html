@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-custom navbar-transparent ctn-delay">
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-transparent ctn-delay">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
                 <img src="../img/webicon.png" alt="Brand" width="70" height="50">
@@ -26,26 +27,42 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav d-flex gap-5">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../index.html"
+                            data-translate="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">About</a>
+                        <a class="nav-link" href="../index.html#about" data-translate="about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="services.html" data-translate="services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" data-translate="contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="container-fluid ctn-picture ctn-delay d-flex justify-content-center align-items-center" id="home">
+        <div class="row">
+            <div class="col-12 top-right text-end">
+                <div class="flag-button-group">
+                    <img src="img/peru.png" alt="Peru Flag" class="flag-icon">
+                    <button class="language-button" onclick="changeLanguage('es')">Español</button>
+                </div>
+                <div class="flag-button-group">
+                    <img src="img/united-states.png" alt="USA Flag" class="flag-icon">
+                    <button class="language-button" onclick="changeLanguage('en')">English</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container ctn-delay">
         <div class="row first-section">
             <div class="col-12 text-center site-title">
-                <p class="h1 text">Let's Connect!</p>
+                <p class="h1 text" data-translate="title-connect">Let's Connect!</p>
             </div>
         </div>
         <div class="row">
@@ -59,7 +76,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="../js/service.js"></script>
+    <script type="module" src="../js/contact.js"></script>
 </body>
 
 </html>
